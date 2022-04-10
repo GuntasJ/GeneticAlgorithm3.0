@@ -32,6 +32,7 @@ public class EvolutionSimulation {
             displayBestChromosomeFromChromosomeList();
             if(hasFitnessScoreBeenMet()) {
                 System.out.println(EvolutionFitness.calculateChromosomeScore(chromosomes.get(0), scoreFunction));
+                System.out.println(3.242);
                 break;
             }
             applyEnvironmentalPressure();

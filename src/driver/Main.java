@@ -9,13 +9,15 @@ public class Main {
         EvolutionSimulation.setChromosomeScoreFunction(chromosome ->
                         Math.pow(chromosome.getGenes().get(0).getGeneValue(), 4)
                 - Math.pow(chromosome.getGenes().get(0).getGeneValue(), 2)
-                - 12);
+                - 100);
         //x^4 - x^2 - 12 = 0
         //expected: ???
 
         EvolutionSimulation.setNumOfGenesPerChromosomes(1);
 
         EvolutionSimulation.simulate();
+
+
     }
 
 }

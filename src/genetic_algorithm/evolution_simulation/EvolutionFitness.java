@@ -17,7 +17,7 @@ public class EvolutionFitness {
             return Double.MAX_VALUE;
         }
         //next time, try different vals for numerator.
-        return Math.abs(2 / answer);
+        return Math.abs(5 / answer);
     }
 
 }

@@ -1,5 +1,7 @@
 package genetic_algorithm.genetics;
 
+import genetic_algorithm.evolution_simulation.EvolutionConstants;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -15,7 +17,7 @@ public class Chromosome {
     public Chromosome(int numOfGenes) {
         Chromosome.numOfGenes = numOfGenes;
         random = new Random();
-        generateGenes(1_000);
+        generateGenes(EvolutionConstants.STARTING_GENE_MULTIPLIER);
     }
 
     public Chromosome(List<Gene> genes) {
