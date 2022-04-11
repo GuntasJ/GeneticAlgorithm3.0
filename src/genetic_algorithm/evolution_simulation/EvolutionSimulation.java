@@ -18,6 +18,8 @@ public class EvolutionSimulation {
 
     private static Function<Chromosome, Double> scoreFunction;
 
+    private EvolutionSimulation() {}
+
     public static void simulate() {
 
         if(scoreFunction == null) {
@@ -32,7 +34,7 @@ public class EvolutionSimulation {
             displayBestChromosomeFromChromosomeList();
             if(hasFitnessScoreBeenMet()) {
                 System.out.println(EvolutionFitness.calculateChromosomeScore(chromosomes.get(0), scoreFunction));
-                System.out.println(3.242);
+                System.out.println(chromosomes.get(0).getGenes().stream().mapToDouble(Gene::getGeneValue).sum());
                 break;
             }
             applyEnvironmentalPressure();
